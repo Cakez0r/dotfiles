@@ -1,0 +1,52 @@
+*background:            #272827
+*foreground:            #657b83
+*fading:                15
+*fadeColor:             black
+*cursorColor:           #16A085
+*pointerColorBackground:#2B2C2B
+*pointerColorForeground:#16A085
+
+! special
+*.foreground:   #c5c8c6
+*.background:   #1e1e20
+*.cursorColor:  #c5c8c6
+
+! black
+*.color0:       #1e1eff
+*.color8:       #a1abad
+
+! red
+*.color1:       #80969b
+*.color9:       #80969b
+
+! green
+*.color2:       #56737a
+*.color10:      #56737a
+
+! yellow
+*.color3:       #416269
+*.color11:      #416269
+
+! blue
+*.color4:       #2c5159
+*.color12:      #2c5159
+
+! magenta
+*.color5:       #274850
+*.color13:      #274850
+
+! cyan
+*.color6:       #1e383e
+*.color14:      #1e383e
+
+! white
+*.color7:       #a1abad
+*.color15:      #a1abad
+
+XTerm*background: #6aa7a5
+XTerm*foreground: #6aa7a5
+XTerm*reverseVideo: on
+!XTerm*faceName: Terminus:size=11:antialias=true
+!XTerm*faceName: InconsolataRegular:size=11:antialias=true
+XTerm*faceName: HackRegular:size=11:antialias=true
+XTerm*selectToClipboard: true
