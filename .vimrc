@@ -66,11 +66,12 @@ set showmatch
 set listchars=tab:▸\ ,eol:¬
 
 " Color scheme (terminal)
+" colorscheme Tomorrow-Night-Bright
+" let base16colorspace=256
 set t_Co=256
 set background=dark
 let g:hybrid_termcolors=256
 let g:hybrid_termtrans=1
-"colorscheme solarized
 hi Normal ctermbg=none
 
 nnoremap <F8> :NERDTreeToggle<CR>
