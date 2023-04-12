@@ -23,3 +23,5 @@ function fish_user_key_bindings
 end
 
 alias config='/usr/bin/git --git-dir=/home/lewis/.cfg/ --work-tree=/home/lewis'
+alias poweroff='systemctl poweroff'
+alias reboot='systemctl reboot'
