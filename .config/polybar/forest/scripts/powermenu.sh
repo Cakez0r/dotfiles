@@ -8,13 +8,13 @@
 dir="~/.config/polybar/forest/scripts/rofi"
 uptime=$(uptime -p | sed -e 's/up //g')
 
-rofi_command="rofi -no-config -theme $dir/powermenu.rasi"
+rofi_command="rofi -no-config -theme $dir/powermenu.rasi -dpi 192"
 
 # Options
 shutdown=" Shutdown"
 reboot=" Restart"
-lock=" Lock"
-suspend=" Sleep"
+# lock=" Lock"
+# suspend=" Sleep"
 logout=" Logout"
 
 # Confirmation
@@ -25,15 +25,16 @@ confirm_exit() {
 		-no-fixed-num-lines\
 		-p "Are You Sure? : "\
 		-theme $dir/confirm.rasi
+    -dpi 192
 }
 
 # Message
 msg() {
-	rofi -no-config -theme "$dir/message.rasi" -e "Available Options  -  yes / y / no / n"
+	rofi -no-config -theme "$dir/message.rasi" -e "Available Options  -  yes / y / no / n" -dpi 192
 }
 
 # Variable passed to rofi
-options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+options="$logout\n$reboot\n$shutdown"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 0)"
 case $chosen in
