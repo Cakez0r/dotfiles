@@ -27,7 +27,6 @@ window {
   text-color:                     @fg;
 	border:							0px;
 	border-color:					#00000033;
-  border-radius:                  16px;
 	width:							1280px;
   location:                       center;
   x-offset:                       0;
