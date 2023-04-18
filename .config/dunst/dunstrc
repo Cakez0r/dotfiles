@@ -57,6 +57,8 @@
     # Set to 0 to disable.
     separator_height = 1
 
+    # gap_size = 8
+
     # Padding between text and separator.
     padding = 24
 
@@ -163,7 +165,7 @@
     hide_duplicate_count = false
 
     # Display indicators for URLs (U) and actions (A).
-    show_indicators = yes
+    show_indicators = no
 
     ### Icons ###
 
@@ -257,9 +259,9 @@
     # * close_all: Close all notifications.
     # These values can be strung together for each mouse event, and
     # will be executed in sequence.
-    mouse_left_click = close_current
-    mouse_middle_click = do_action, close_current
-    mouse_right_click = close_all
+    mouse_left_click = do_action, close_current
+    mouse_middle_click = close_all
+    mouse_right_click = close_current
 
 # Experimental features that may or may not work correctly. Do not expect them
 # to have a consistent behaviour across releases.
@@ -304,6 +306,8 @@
 [urgency_normal]
     background = "#FFFFFF22"
     foreground = "#ffffff"
+    #background = "#00000022"
+    #foreground = "#212B30"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
