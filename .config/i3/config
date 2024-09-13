@@ -225,13 +225,14 @@ bindsym $mod+l exec --no-startup-id dm-tool lock
 bindsym $mod+e exec thunar
 
 # Browser
-bindsym $mod+b exec brave-browser
+bindsym $mod+b exec brave-browser --password-store=basic
 
 # Autostart applications
 exec --no-startup-id nitrogen --restore; 
 exec picom -b
 # exec --no-startup-id clipit
-# exec --no-startup-id blueman
+exec --no-startup-id blueman-applet
+exec --no-startup-id xfce4-power-manager
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
@@ -260,6 +261,7 @@ set_from_resource	$color15	color15
 
 # Polybar launch script (located ~/.config/polybar/launch.sh) 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
+exec_always --no-startup-id nm-applet
 
 # Annoying volume fix
 exec sleep 1; i3-msg restart
@@ -269,7 +271,7 @@ exec sleep 1; i3-msg restart
 # bindsym $mod+F9 scratchpad show
 
 bindsym $mod+t [window_role="scratchterm"] scratchpad show, move position center
-for_window [window_role="scratchterm"] floating enable, resize set 1920 1080, move scratchpad, border pixel 2
+for_window [window_role="scratchterm"] floating enable, resize set 960 600, move scratchpad, border pixel 2
 exec --no-startup-id sleep 1; xfce4-terminal --role=scratchterm &
 
 # Theme colors
@@ -305,7 +307,7 @@ gaps inner 4
 #smart_borders on
 
 # Pulse Audio Controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% # Increase
+bindsym XF86AudioRaiseVolume exec --no-startup-id volumeup # .local/bin/volumeup
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% # Decrease
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # Mute
 
